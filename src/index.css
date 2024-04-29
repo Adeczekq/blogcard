@@ -1,13 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "test";
+  src: url("./../public/assets/fonts/Figtree-VariableFont_wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "extrabold";
+  src: url("./../public/assets/fonts/static/Figtree-ExtraBold.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "semibold";
+  src: url("./../public/assets/fonts/static/Figtree-SemiBold.ttf")
+    format("truetype");
+}
 body {
+  background-color: #f4d04e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+.con {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 100%;
+  padding: 24px;
+  border: solid 1px black;
+  border-radius: 20px;
+  font-family: "test", sans-serif;
+  min-width: 327px;
+  max-width: 384px;
+  gap: 24px;
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.3s ease;
+  margin: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.con:hover {
+  box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+.image {
+  height: 200px;
+
+  border-radius: 10px;
+}
+
+.blog-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  width: 100%;
+}
+.date {
+  margin: 0;
+  font-family: "semibold", sans-serif;
+  font-size: 0.875rem;
+}
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.title:hover {
+  color: #f4d04e;
+  cursor: pointer;
+}
+.button {
+  width: fit-content;
+  background-color: #f4d04e;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 4px;
+  font-family: "extrabold", sans-serif;
+}
+
+.desc {
+  font-family: "test", sans-serif;
+  margin: 0;
+}
+.avatar {
+  aspect-ratio: 1;
+  height: 32px;
+}
+.name {
+  font-family: "extrabold", sans-serif;
+}
+.inline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
